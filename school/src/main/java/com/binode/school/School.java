@@ -1,4 +1,4 @@
-package com.binode.student;
+package com.binode.school;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,20 +6,18 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.*;
 
-
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity
 @Table
-public class Student {
+public class School {
     @Id
     @GeneratedValue
     private Long id;
-    private String firstname;
-    private String lastname;
+    private String name;
     private String email;
-    private Integer schoolId;
+
 }
