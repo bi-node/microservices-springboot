@@ -22,4 +22,9 @@ public class SchoolController {
         schoolService.saveSchool(school);
         return "Successfully added school";
     }
+
+    @GetMapping("/with-students/{school-id}")
+    public ResponseEntity<FullSchoolResponse> getSchoolWithStudents(@PathVariable(name="school-id") Long schoolId) {
+        return  ResponseEntity.ok(schoolService.findSchoolWithStudents(schoolId));
+    }
 }
