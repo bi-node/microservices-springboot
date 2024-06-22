@@ -10,4 +10,10 @@ docker exec -it micro-container psql -U user -d main_db -c "CREATE DATABASE scho
 docker exec -it micro-container psql -U user -d main_db
 
 
-
+zipkin:
+container_name: zipkin
+image: openzipkin/zipkin
+ports:
+ -"9411:9411"
+networks: 
+zipkin
